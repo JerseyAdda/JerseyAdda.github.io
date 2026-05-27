@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jersey Adda</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#eef1eb;
+    font-family:'Poppins',sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.poster{
+    width:430px;
+    height:932px;
+    background:#eef1eb;
+    position:relative;
+    overflow:hidden;
+}
+
+/* WELCOME TEXT */
+.title{
+    position:absolute;
+    top:60px;
+    left:40px;
+    z-index:5;
+}
+
+.title h1{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size:62px;
+    line-height:0.95;
+    font-weight:900;
+    letter-spacing:-1px;
+
+    background:linear-gradient(
+    to bottom,
+    #013220,
+    #0b5d3b);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+/* MODEL IMAGE */
+.model{
+    position:absolute;
+    left:-5px;
+    bottom:10px;
+    width:225px;
+    z-index:2;
+    display: flex;
+    align-items: flex-end;
+}
+
+.model img{
+    width:122.5%;
+    display:block;
+    filter: drop-shadow(50px 100px 200px rgba(0,0,0,0.12));
+}
+
+/* MESSAGE BOX (আপনার চিহ্নিত করা খালি জায়গায় ওপরে নেওয়া হয়েছে) */
+.speech{
+    position:absolute;
+    top:340px; /* ৪00px থেকে কমিয়ে ৩৪০px করা হয়েছে যাতে লাল বৃত্তের খালি জায়গায় সেট হয় */
+    right:20px;
+    width:200px;
+    background:#fff;
+    border:3.5px solid #000;
+    border-radius:20px;
+    padding:12px 10px;
+    z-index:6;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+/* TAIL (লেজের পজিশন মুখের সাথে সামঞ্জস্যপূর্ণ রাখা হয়েছে) */
+.speech::after{
+    content:'';
+    position:absolute;
+    left:-14px;
+    bottom:15px; /* ওপরে তোলার কারণে লেজের পজিশন কিছুটা নিচে নামানো হয়েছে */
+    width:24px;
+    height:24px;
+    background:#fff;
+    border-left:3.5px solid #000;
+    border-bottom:3.5px solid #000;
+    transform:rotate(45deg);
+}
+
+.speech h2{
+    text-align:center;
+    font-size:18px;
+    line-height:1.25;
+    font-weight:800;
+    color:#000;
+}
+
+/* BUTTON */
+.btn{
+    position:absolute;
+    bottom:42px;
+    left:50%;
+    transform:translateX(-50%);
+    width:280px;
+    height:65px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(
+    to right,
+    #013220,
+    #0b5d3b,
+    #013220);
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index:7;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:430px){
+    .poster{
+        width:100%;
+        height:100vh;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+
+    <div class="title">
+        <h1>
+            Welcome<br>
+            To The<br>
+            Jersey<br>
+            Adda
+        </h1>
+    </div>
+
+    <div class="model">
+        <img src="https://i.postimg.cc/s29k0fCr/Picsart-26-05-25-11-51-10-701.png" alt="Model">
+    </div>
+
+    <div class="speech" data-aos="zoom-in" data-aos-duration="1000">
+        <h2>
+            আসল<br>
+            ফ্যানদের জন্য<br>
+            আসল স্টাইল
+        </h2>
+    </div>
+
+    <button class="btn">
+        Go Shopping
+    </button>
+
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init(); // AOS অ্যানিমেশন সচল করার জন্য
+</script>
+
+</body>
+</html>
